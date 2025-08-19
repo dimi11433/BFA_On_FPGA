@@ -14,13 +14,13 @@ example_input = torch.randn(1, 3, 224, 224)
 
 config = hls4ml.utils.config_from_pytorch_model(
     model,
+    input_shape = (1, 3, 224, 224),
     granularity='model',
     backend='Vivado',
 )
 
 hls_model = hls4ml.converters.convert_from_pytorch_model(
     model,
-    input_shape = (1, 3, 224, 224),
     hls_config = config,
     backend = 'Vivado', #Fix later
     output_dir = 'BFA_no_Quant/hls4ml_prj/',
