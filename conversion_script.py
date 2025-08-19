@@ -1,6 +1,6 @@
 import torch 
 import hls4ml 
-import onnx
+# import onnx
 import torchvision.models as models 
 
 #load the model 
