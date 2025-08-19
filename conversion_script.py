@@ -14,7 +14,7 @@ example_input = torch.randn(1, 3, 224, 224)
 
 config = hls4ml.utils.config_from_pytorch_model(
     model,
-    input_shape = (1, 3, 224, 224),
+    input_shape = (3, 224, 224),
     granularity='model',
     backend='Vivado',
 )
